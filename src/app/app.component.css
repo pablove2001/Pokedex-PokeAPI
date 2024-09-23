@@ -1,0 +1,12 @@
+body {
+  background-color: #727272;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #6a6a6a 0,
+    #6a6a6a 2px,
+    #727272 2px,
+    #727272 11px
+  );
+  margin: 0; /* Para evitar márgenes predeterminados */
+  height: 100vh; /* Asegúrate de que ocupe toda la altura */
+}

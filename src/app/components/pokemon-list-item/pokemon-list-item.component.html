@@ -1,0 +1,16 @@
+<div (click)="openModal()"
+  class="drop-shadow-md overflow-hidden relative rounded-md transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
+  <div class="overflow-hidden h-auto w-full rounded-md bg-gray-200 flex items-center justify-center">
+    <img [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + id + '.png'"
+      class="w-[220px] h-[220px] object-contain" [alt]="displayName">
+  </div>
+  <div class="ml-4 mt-1">
+    <p class="text-sm font-semibold text-gray-500">N.º {{ idString }}</p>
+    <h5 class="font-mono text-lg font-semibold">{{ displayName }}</h5>
+  </div>
+</div>
+
+<!-- Modal -->
+@if (modalOpen) {
+<app-pokemon-modal [pokemon]="pokemon.name" (closeModal)="closeModal()" />
+}
