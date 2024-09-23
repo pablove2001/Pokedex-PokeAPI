@@ -1,17 +1,27 @@
 <div class="fixed inset-0 bg-black bg-opacity-50 z-40 flex justify-center items-center">
-    <div class="bg-white rounded-lg p-8 max-w-md w-full m-4 relative">
-        <button (click)="close()" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </button>
-        <ng-content>
-        </ng-content>
-        <p>ID: {{ displayID }}</p>
-        <h5>Name: {{ displayName }}</h5>
-        <p>Height: {{ displayHeight }} m</p>
-        <p>Weight: {{ displayWeight }} kg</p>
-        <p>Type(s): {{ displayTypes }}</p>
+    <div class="bg-white rounded-tr-lg rounded-br-[60px] rounded-bl-lg max-w-md w-full m-4 relative">
+        <div class="flex max-[500px]:block h-56 max-[500px]:h-auto max-[500px]:py-2">
+            <button (click)="close()" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <div
+                class="overflow-hidden w-52 h-52 rounded-br-[60px] bg-orange-100 flex items-center justify-center max-[500px]:m-auto">
+                <img [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + pokemonInfo.id + '.png'"
+                    class="w-52 h-52 object-contain" [alt]="displayName">
+            </div>
+            <div class="pt-2 px-2 font-mono">
+                <div class="bg-red-400 mb-3 mr-9 max-[500px]:mr-0">
+                    <h3 class="text-center text-lg px-2">{{ displayID }} {{ displayName }}</h3>
+                </div>
+                <p>Num: {{ displayID }}</p>
+                <h5>Name: {{ displayName }}</h5>
+                <p>Height: {{ displayHeight }} m</p>
+                <p>Weight: {{ displayWeight }} kg</p>
+                <p>Type(s): {{ displayTypes }}</p>
+            </div>
+        </div>
     </div>
 </div>

@@ -1,7 +1,7 @@
 <div class="max-w-[1010px] mx-auto p-6">
   <div class="flex justify-between">
     <!-- Search input -->
-    <form (ngSubmit)="onSubmit($event)" class="max-w-md flex-grow">
+    <form (ngSubmit)="onSubmit($event)" class="max-w-md flex-grow mr-2">
       <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
       <div class="relative">
         <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -13,7 +13,7 @@
         </div>
         <input type="search" id="default-search" [(ngModel)]="searchPokemon" name="search"
           class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
-          placeholder="Search Mockups, Logos..." required />
+          placeholder="Name..." required />
         <button type="submit"
           class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">Search</button>
       </div>
@@ -26,7 +26,7 @@
     <!-- Pagination -->
     <div class=" inline-flex items-center justify-center gap-3">
       <a (click)="previousPage()"
-        class="inline-flex size-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900 rtl:rotate-180">
+        class="inline-flex size-8 items-center justify-center rounded border border-gray-100 bg-gray-100 hover:bg-gray-200 cursor-pointer text-gray-900 rtl:rotate-180">
         <span class="sr-only">Prev Page</span>
         <svg xmlns="http://www.w3.org/2000/svg" class="size-3" viewBox="0 0 20 20" fill="currentColor">
           <path fill-rule="evenodd"
@@ -34,13 +34,13 @@
             clip-rule="evenodd" />
         </svg>
       </a>
-      <p class="text-xs text-gray-900">
+      <p class="text-sm text-gray-900">
         {{ currentPage }}
         <span class="mx-0.25">/</span>
         {{ maxPage }}
       </p>
       <a (click)="nextPage()"
-        class="inline-flex size-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900 rtl:rotate-180">
+        class="inline-flex size-8 items-center justify-center rounded border border-gray-100 bg-gray-100 hover:bg-gray-200 cursor-pointer text-gray-900 rtl:rotate-180">
         <span class="sr-only">Next Page</span>
         <svg xmlns="http://www.w3.org/2000/svg" class="size-3" viewBox="0 0 20 20" fill="currentColor">
           <path fill-rule="evenodd"

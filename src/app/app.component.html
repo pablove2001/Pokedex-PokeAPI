@@ -1,15 +1,25 @@
 <nav class="bg-gray-800 py-4">
     <div class="container mx-auto flex justify-between items-center max-w-[1010px] px-6">
-        <a href="#" class="text-white text-2xl font-semibold">Logo</a>
+        <div class="flex">
+            <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/52970365/369736117-eb54e50e-2cc2-4f4a-bf88-d568d25f5b0f.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240923%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240923T021155Z&X-Amz-Expires=300&X-Amz-Signature=f172f8fba429c640deee67a13ec94deb84ee5c5d2145b2de1198c4704f576d79&X-Amz-SignedHeaders=host"
+                alt="" class="h-8 w-8 mr-2">
+            <a href="/" class="text-white text-2xl font-semibold">Pokedex</a>
+        </div>
         <ul class="flex space-x-4">
-            <li><a href="#" class="text-white hover:text-gray-300">Home</a></li>
-            <li><a href="#" class="text-white hover:text-gray-300">About</a></li>
-            <li><a href="#" class="text-white hover:text-gray-300">Services</a></li>
-            <li><a href="#" class="text-white hover:text-gray-300">Contact</a></li>
+            <li><a href="https://github.com/pablove2001/Pokedex-PokeAPI" class="text-white hover:text-gray-300"
+                    target="_blank">Github</a></li>
         </ul>
     </div>
 </nav>
 
 <app-pokemon-list />
+
+<footer class="bg-white rounded-lg m-6">
+    <div class="w-full max-w-screen-xl mx-auto px-4">
+        <hr class="mb-6 border-gray-200 sm:mx-auto" />
+        <span class="block text-sm text-gray-500 sm:text-center">© 2024 <a href="https://github.com/pablove2001"
+                class="hover:underline">PabloVE™</a>. No Rights Reserved.</span>
+    </div>
+</footer>
 
 <router-outlet />

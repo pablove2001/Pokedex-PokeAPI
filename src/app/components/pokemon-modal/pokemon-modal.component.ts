@@ -19,8 +19,13 @@ export class PokemonModalComponent {
   displayID: string = '';
   types: string[] = [];
   displayTypes: string = '';
+  private audio: HTMLAudioElement;
 
-  constructor(private service: PokemonService) {}
+  constructor(private service: PokemonService) {
+    this.audio = new Audio(
+      'https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/1.ogg'
+    );
+  }
 
   ngOnInit() {
     this.service.getPokemonDetails(this.pokemon).subscribe((data) => {
@@ -33,10 +38,16 @@ export class PokemonModalComponent {
       this.displayID = this.pokemonInfo.id.toString().padStart(4, '0');
 
       for (let i = 0; i < this.pokemonInfo.types.length; i++) {
-        this.types.push(this.pokemonInfo.types[i].type.name);
+        let type = this.pokemonInfo.types[i].type.name;
+        type = type.charAt(0).toUpperCase() + type.slice(1);
+        this.types.push(type);
       }
       this.displayTypes = this.types.join(', ');
     });
+  }
+
+  playAudio() {
+    this.audio.play();
   }
 
   close() {
