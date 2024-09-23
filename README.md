@@ -1,27 +1,54 @@
-# Pokedex
+# Pokedex usando PokeAPI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.9.
+Este proyecto es una aplicación web desarrollada en Angular que utiliza la PokeAPI para mostrar información sobre Pokémon. Permite ver una lista de Pokémon, buscar Pokémon específicos y ver detalles de cada uno.
 
-## Development server
+![image](https://github.com/user-attachments/assets/ce0d324f-8b19-4878-becd-f748c1194903)
+![image](https://github.com/user-attachments/assets/e19c306c-256c-4b87-9734-e622a684468b)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Versiones utilizadas
 
-## Code scaffolding
+- Angular CLI: 17.3.9
+- Node: 20.17.0
+- Package Manager: npm 10.8.3
+- Angular: 17.3.12
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Instalación
 
-## Build
+1. Clona el repositorio:
+   ```
+   git clone https://github.com/pablove2001/Pokedex-PokeAPI.git
+   ```
+2. Navega al directorio del proyecto:
+   ```
+   cd Pokedex-PokeAPI
+   ```
+3. Instala las dependencias:
+   ```
+   npm install
+   ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Ejecución
 
-## Running unit tests
+Para ejecutar el proyecto en modo de desarrollo:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+ng serve
+```
 
-## Running end-to-end tests
+Navega a `http://localhost:4200/`. La aplicación se recargará automáticamente si cambias alguno de los archivos fuente.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## API utilizada
 
-## Further help
+Este proyecto utiliza la [PokeAPI](https://pokeapi.co/) para obtener la información de los Pokémon.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Librerías adicionales
+
+- [Tailwind CSS](https://tailwindcss.com/)
+
+## Demo
+
+Puedes ver una demostración en vivo del proyecto aquí: [Pokedex Demo](https://main--pokedex-using-pokeapi.netlify.app/)
+
+## Referecias
+
+<a href="https://www.flaticon.com/free-icons/pokemon" title="pokemon icons">Pokemon icons created by Freepik - Flaticon</a>
