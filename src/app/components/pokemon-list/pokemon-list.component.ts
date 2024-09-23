@@ -12,7 +12,7 @@ import { PokemonListItemComponent } from '../pokemon-list-item/pokemon-list-item
 import { map, switchMap } from 'rxjs';
 import { PokemonModalComponent } from '../pokemon-modal/pokemon-modal.component';
 import { catchError } from 'rxjs/operators';
-import { of, Observable, throwError } from 'rxjs';
+import { of } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
